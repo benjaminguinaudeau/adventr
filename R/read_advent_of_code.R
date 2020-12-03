@@ -5,7 +5,6 @@
 #' @export
 #' @examples
 #' \dontrun{
-#'
 #'# Feed your cookie as environment variable
 #'Sys.setenv("ADVENT_COOKIE" = "<paste_your_cookie>")
 #'read_advent_of_code(day = 1)

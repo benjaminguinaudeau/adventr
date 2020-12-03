@@ -6,6 +6,22 @@
 \usage{
 read_advent_of_code(day = 1, cookie = NULL)
 }
+\arguments{
+\item{day}{Numeric indicating which day needs to be read}
+
+\item{cookie}{Not required. A session cookie retrieved as shown in the readme.}
+}
 \description{
-read_advent_of_code
+Read problem data from the Advent of Code
+}
+\examples{
+\dontrun{
+# Feed your cookie as environment variable
+Sys.setenv("ADVENT_COOKIE" = "<paste_your_cookie>")
+read_advent_of_code(day = 1)
+
+# Feed the cookie as a parameter
+cookie <- "<paste_your_cookie>"
+read_advent_of_code(day = 1, cookie = cookie)
+}
 }
