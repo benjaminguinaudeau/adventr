@@ -39,5 +39,5 @@ read_advent_of_code <- function(day = 1, cookie = NULL){
     stop("Request was blocked")
   }
 
-  setdiff(stringr::str_split(rawToChar(req[["content"]]), "\n")[[1]], "")
+  stringr::str_split(rawToChar(req[["content"]]), "\n")[[1]]
 }
