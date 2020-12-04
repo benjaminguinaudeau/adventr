@@ -3,9 +3,11 @@
 
 # adventr
 
-This package provides one single function: `read_advent_of_code`, which
-directly load into your session the problem data of a specific day of
-the [Advent of Code](https://adventofcode.com/).
+This package provides two functions: + `read_advent_of_code`, which
+directly loads into your session the problem data of a specific day of
+the [Advent of Code](https://adventofcode.com/). +
+`submit_to_advent_of_code`, which directly submit your solution to a
+specific problem
 
 This will spare you some manipulations and reduce the pollution of your
 download folder.
@@ -27,7 +29,12 @@ library(adventr)
 
 read_advent_of_code(day = 1) %>%
   dplyr::glimpse()
-#>  chr [1:200] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+#>  chr [1:201] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+```
+
+``` r
+# Submitting answer 265 to problem 2 of day 4
+submit_to_advent_of_code(answer = 265, day = 4, level = 2)
 ```
 
 ## How does it work?
@@ -77,7 +84,14 @@ manipulation.
 ``` r
 read_advent_of_code(day = 1) %>%
   dplyr::glimpse()
-#>  chr [1:200] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+#>  chr [1:201] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+```
+
+``` r
+# First problem of day 1
+submit_to_advent_of_code(answer = 14, day = 1, level = 1)
+# Second problem of day 1
+submit_to_advent_of_code(answer = 78, day = 1, level = 2)
 ```
 
 ### Day 2
@@ -85,7 +99,7 @@ read_advent_of_code(day = 1) %>%
 ``` r
 read_advent_of_code(day = 2) %>%
   dplyr::glimpse()
-#>  chr [1:1000] "6-7 w: wwhmzwtwwk" "10-12 q: qqqqqqqqqqqdqqq" ...
+#>  chr [1:1001] "6-7 w: wwhmzwtwwk" "10-12 q: qqqqqqqqqqqdqqq" ...
 ```
 
 ### Day 3
@@ -93,5 +107,13 @@ read_advent_of_code(day = 2) %>%
 ``` r
 read_advent_of_code(day = 3) %>%
   dplyr::glimpse()
-#>  chr [1:323] ".........#..##.##.............." ...
+#>  chr [1:324] ".........#..##.##.............." ...
+```
+
+### Day 4
+
+``` r
+read_advent_of_code(day = 4) %>%
+  dplyr::glimpse()
+#>  chr [1:1001] "hcl:#6b5442 ecl:brn iyr:2019" "pid:637485594 hgt:171cm" ...
 ```

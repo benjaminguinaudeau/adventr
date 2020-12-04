@@ -19,9 +19,12 @@ cookie <- Sys.getenv("ADVENT_COOKIE")
 
 # adventr
 
-This package provides one single function: `read_advent_of_code`, which directly load into your session the problem data of a specific day of the [Advent of Code](https://adventofcode.com/).
+This package provides two functions: 
+  + `read_advent_of_code`, which directly loads into your session the problem data of a specific day of the [Advent of Code](https://adventofcode.com/).
+  + `submit_to_advent_of_code`, which directly submit your solution to a specific problem
 
 This will spare you some manipulations and reduce the pollution of your download folder. 
+
 
 ## Installation
 
@@ -39,6 +42,11 @@ library(adventr)
 
 read_advent_of_code(day = 1) %>%
   dplyr::glimpse()
+```
+
+```{r, eval = F}
+# Submitting answer 265 to problem 2 of day 4
+submit_to_advent_of_code(answer = 265, day = 4, level = 2)
 ```
 
 
@@ -84,6 +92,14 @@ read_advent_of_code(day = 1) %>%
 ```
 
 
+```{r, eval = F}
+# First problem of day 1
+submit_to_advent_of_code(answer = 14, day = 1, level = 1)
+# Second problem of day 1
+submit_to_advent_of_code(answer = 78, day = 1, level = 2)
+```
+
+
 ### Day 2
 
 ```{r}
@@ -95,6 +111,13 @@ read_advent_of_code(day = 2) %>%
 
 ```{r}
 read_advent_of_code(day = 3) %>%
+  dplyr::glimpse()
+```
+
+### Day 4
+
+```{r}
+read_advent_of_code(day = 4) %>%
   dplyr::glimpse()
 ```
 
