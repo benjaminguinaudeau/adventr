@@ -2,4 +2,5 @@
 
 export("%>%")
 export(read_advent_of_code)
+export(submit_to_advent_of_code)
 importFrom(magrittr,"%>%")

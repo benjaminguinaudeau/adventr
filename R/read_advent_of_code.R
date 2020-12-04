@@ -1,7 +1,7 @@
 #' read_advent_of_code
 #' @description Read problem data from the Advent of Code
 #' @param day Numeric indicating which day needs to be read
-#' @param cookie Not required. A session cookie retrieved as shown in the readme.
+#' @param cookie Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.
 #' @export
 #' @examples
 #' \dontrun{

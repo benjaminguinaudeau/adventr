@@ -9,7 +9,7 @@ read_advent_of_code(day = 1, cookie = NULL)
 \arguments{
 \item{day}{Numeric indicating which day needs to be read}
 
-\item{cookie}{Not required. A session cookie retrieved as shown in the readme.}
+\item{cookie}{Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.}
 }
 \description{
 Read problem data from the Advent of Code
