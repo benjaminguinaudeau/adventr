@@ -1,4 +1,4 @@
-#' read_advent_of_code
+#' read_advent
 #' @description Read problem data from the Advent of Code
 #' @param day Numeric indicating which day needs to be read
 #' @param cookie Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.
@@ -8,14 +8,14 @@
 #' \dontrun{
 #'# Feed your cookie as environment variable
 #'Sys.setenv("ADVENT_COOKIE" = "<paste_your_cookie>")
-#'read_advent_of_code(day = 1)
+#'read_advent(day = 1)
 #'
 #'# Feed the cookie as a parameter
 #'cookie <- "<paste_your_cookie>"
-#'read_advent_of_code(day = 1, cookie = cookie)
+#'read_advent(day = 1, cookie = cookie)
 #' }
 
-read_advent_of_code <- function(day = 1, cookie = NULL, year = 2021){
+read_advent <- function(day = 1, cookie = NULL, year = 2021){
   if(is.null(cookie)){
     cookie <- Sys.getenv("ADVENT_COOKIE")
   }

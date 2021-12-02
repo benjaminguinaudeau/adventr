@@ -3,11 +3,13 @@
 
 # adventr
 
-This package provides two functions: + `read_advent_of_code`, which
-directly loads into your session the problem data of a specific day of
-the [Advent of Code](https://adventofcode.com/). +
-`submit_to_advent_of_code`, which directly submit your solution to a
-specific problem
+This package provides two functions:
+
+-   `read_advent`, which directly loads into your session the problem
+    data of a specific day of the [Advent of
+    Code](https://adventofcode.com/).
+-   `submit_advent`, which directly submit your solution to a specific
+    problem
 
 This will spare you some manipulations and reduce the pollution of your
 download folder.
@@ -22,19 +24,19 @@ devtools::install_github("benjaminguinaudeau/adventr")
 ## How to use?
 
 Once you have initialized your cookie (see below), you can read the
-problem data of any day using `read_advent_of_code`:
+problem data of any day using `read_advent`:
 
 ``` r
 library(adventr)
 
-read_advent_of_code(day = 1) %>%
+read_advent(day = 1) %>%
   dplyr::glimpse()
-#>  chr [1:201] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+#>  chr [1:2001] "143" "147" "150" "166" "180" "187" "188" "185" "199" "198" ...
 ```
 
 ``` r
 # Submitting answer 265 to problem 2 of day 4
-submit_to_advent_of_code(answer = 265, day = 4, level = 2)
+submit_advent(answer = 265, day = 4, level = 2)
 ```
 
 ## How does it work?
@@ -64,7 +66,7 @@ named `ADVENT_COOKIE`.
 # cookie as an object in the session
 cookie <- "<paste_your_cookie>"
 
-read_advent_of_code(day = 1, cookie = cookie) %>%
+read_advent(day = 1, cookie = cookie) %>%
   dplyr::glimpse()
 ```
 
@@ -72,7 +74,7 @@ read_advent_of_code(day = 1, cookie = cookie) %>%
 # cookie as an environment variable
 Sys.setenv("ADVENT_COOKIE" = "<paste_your_cookie>")
 
-read_advent_of_code(day = 1) %>%
+read_advent(day = 1) %>%
   dplyr::glimpse()
 ```
 
@@ -82,38 +84,22 @@ manipulation.
 ### Day 1
 
 ``` r
-read_advent_of_code(day = 1) %>%
+read_advent(day = 1) %>%
   dplyr::glimpse()
-#>  chr [1:201] "1511" "1344" "1925" "1970" "1864" "1951" "1557" "1984" "1743" ...
+#>  chr [1:2001] "143" "147" "150" "166" "180" "187" "188" "185" "199" "198" ...
 ```
 
 ``` r
 # First problem of day 1
-submit_to_advent_of_code(answer = 14, day = 1, level = 1)
+submit_advent(answer = 14, day = 1, level = 1)
 # Second problem of day 1
-submit_to_advent_of_code(answer = 78, day = 1, level = 2)
+submit_advent(answer = 78, day = 1, level = 2)
 ```
 
 ### Day 2
 
 ``` r
-read_advent_of_code(day = 2) %>%
+read_advent(day = 2) %>%
   dplyr::glimpse()
-#>  chr [1:1001] "6-7 w: wwhmzwtwwk" "10-12 q: qqqqqqqqqqqdqqq" ...
-```
-
-### Day 3
-
-``` r
-read_advent_of_code(day = 3) %>%
-  dplyr::glimpse()
-#>  chr [1:324] ".........#..##.##.............." ...
-```
-
-### Day 4
-
-``` r
-read_advent_of_code(day = 4) %>%
-  dplyr::glimpse()
-#>  chr [1:1001] "hcl:#6b5442 ecl:brn iyr:2019" "pid:637485594 hgt:171cm" ...
+#>  chr [1:1001] "forward 3" "down 9" "forward 6" "down 3" "forward 8" ...
 ```

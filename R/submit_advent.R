@@ -1,4 +1,4 @@
-#' submit_to_advent_of_code
+#' submit_advent
 #' @description Submit your answer to the Advent of Code
 #' @param answer Answer to the problem
 #' @param day Numeric indicating which day needs to be read
@@ -10,14 +10,14 @@
 #' \dontrun{
 #'# Feed your cookie as environment variable
 #'Sys.setenv("ADVENT_COOKIE" = "<paste_your_cookie>")
-#'submit_to_advent_of_code(answer = 25, day = 1, level = 1)
+#'submit_advent(answer = 25, day = 1, level = 1)
 #'
 #'# Feed the cookie as a parameter
 #'cookie <- "<paste_your_cookie>"
-#'read_advent_of_code(answer = 25, day = 1, level = 1, cookie = cookie)
+#'read_advent(answer = 25, day = 1, level = 1, cookie = cookie)
 #' }
 
-submit_to_advent_of_code <- function(answer, day, level, cookie = NULL, year = 2021){
+submit_advent <- function(answer, day, level, cookie = NULL, year = 2021){
   if(is.null(cookie)){
     cookie <- Sys.getenv("ADVENT_COOKIE")
   }
@@ -39,6 +39,6 @@ submit_to_advent_of_code <- function(answer, day, level, cookie = NULL, year = 2
   xml2::read_html(rawToChar(res$content)) %>%
     rvest::html_nodes("p") %>%
     rvest::html_text() %>%
-    str_remove("\\[.*?\\]$")
+    stringr::str_remove("\\[.*?\\]$")
 
 }
