@@ -4,12 +4,14 @@
 \alias{read_advent_of_code}
 \title{read_advent_of_code}
 \usage{
-read_advent_of_code(day = 1, cookie = NULL)
+read_advent_of_code(day = 1, cookie = NULL, year = 2021)
 }
 \arguments{
 \item{day}{Numeric indicating which day needs to be read}
 
 \item{cookie}{Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.}
+
+\item{year}{Year of the problem. By default 2021}
 }
 \description{
 Read problem data from the Advent of Code

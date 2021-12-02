@@ -4,6 +4,7 @@
 #' @param day Numeric indicating which day needs to be read
 #' @param level Numeric indicating the problem to be solved. 1 for the first daily problem and 2 for the second one.
 #' @param cookie Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.
+#' @param year Year of the problem. By default 2021
 #' @export
 #' @examples
 #' \dontrun{
@@ -16,7 +17,7 @@
 #'read_advent_of_code(answer = 25, day = 1, level = 1, cookie = cookie)
 #' }
 
-submit_to_advent_of_code <- function(answer, day, level, cookie = NULL){
+submit_to_advent_of_code <- function(answer, day, level, cookie = NULL, year = 2021){
   if(is.null(cookie)){
     cookie <- Sys.getenv("ADVENT_COOKIE")
   }
@@ -25,7 +26,7 @@ submit_to_advent_of_code <- function(answer, day, level, cookie = NULL){
   }
 
   res <- httr::POST(
-    glue::glue("https://adventofcode.com/2020/day/{day}/answer"),
+    glue::glue("https://adventofcode.com/{year}/day/{day}/answer"),
     httr::add_headers(
       .headers = c(
         'user-agent' = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36',

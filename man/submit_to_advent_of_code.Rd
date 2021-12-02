@@ -4,7 +4,7 @@
 \alias{submit_to_advent_of_code}
 \title{submit_to_advent_of_code}
 \usage{
-submit_to_advent_of_code(answer, day, level, cookie = NULL)
+submit_to_advent_of_code(answer, day, level, cookie = NULL, year = 2021)
 }
 \arguments{
 \item{answer}{Answer to the problem}
@@ -14,6 +14,8 @@ submit_to_advent_of_code(answer, day, level, cookie = NULL)
 \item{level}{Numeric indicating the problem to be solved. 1 for the first daily problem and 2 for the second one.}
 
 \item{cookie}{Not required if coookie set as an environment variable. A session cookie retrieved as shown in the readme.}
+
+\item{year}{Year of the problem. By default 2021}
 }
 \description{
 Submit your answer to the Advent of Code
