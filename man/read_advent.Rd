@@ -4,7 +4,7 @@
 \alias{read_advent}
 \title{read_advent}
 \usage{
-read_advent(day = 1, cookie = NULL, year = 2021)
+read_advent(day = 1, cookie = NULL, year = 2022)
 }
 \arguments{
 \item{day}{Numeric indicating which day needs to be read}

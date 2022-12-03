@@ -41,13 +41,13 @@ Once you have initialized your cookie (see below), you can read the problem data
 ```{r}
 library(adventr)
 
-read_advent(day = 1) %>%
+read_advent(day = 2, year = 2022) %>%
   dplyr::glimpse()
 ```
 
 ```{r, eval = F}
 # Submitting answer 265 to problem 2 of day 4
-submit_advent(answer = 265, day = 4, level = 2)
+submit_advent(answer = 265, year = 2022, day = 4, level = 2)
 ```
 
 

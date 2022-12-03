@@ -17,7 +17,7 @@
 #'read_advent(answer = 25, day = 1, level = 1, cookie = cookie)
 #' }
 
-submit_advent <- function(answer, day, level, cookie = NULL, year = 2021){
+submit_advent <- function(answer, day, level, cookie = NULL, year = 2022){
   if(is.null(cookie)){
     cookie <- Sys.getenv("ADVENT_COOKIE")
   }

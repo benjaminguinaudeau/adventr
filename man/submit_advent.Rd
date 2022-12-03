@@ -4,7 +4,7 @@
 \alias{submit_advent}
 \title{submit_advent}
 \usage{
-submit_advent(answer, day, level, cookie = NULL, year = 2021)
+submit_advent(answer, day, level, cookie = NULL, year = 2022)
 }
 \arguments{
 \item{answer}{Answer to the problem}

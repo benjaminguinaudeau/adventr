@@ -15,7 +15,7 @@
 #'read_advent(day = 1, cookie = cookie)
 #' }
 
-read_advent <- function(day = 1, cookie = NULL, year = 2021){
+read_advent <- function(day = 1, cookie = NULL, year = 2022){
   if(is.null(cookie)){
     cookie <- Sys.getenv("ADVENT_COOKIE")
   }
